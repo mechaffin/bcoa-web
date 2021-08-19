@@ -1,0 +1,4 @@
+{ 
+    "editor.formatOnSave": true, // Runs prettier on save
+    "editor.tabSize": 2
+}
