@@ -1,8 +1,11 @@
-const {
+import {
   createMuiTheme,
-  responsiveFontSizes,
   makeStyles,
-} = require("@material-ui/core");
+  responsiveFontSizes,
+} from "@material-ui/core";
+
+import { alpha } from "@material-ui/core/styles/colorManipulator";
+import { grey } from "@material-ui/core/colors";
 
 export const CONSTANTS = Object.freeze({
   tile: { width: 315, height: 250, margin: 2 },
@@ -11,7 +14,7 @@ export const CONSTANTS = Object.freeze({
     images: "/versatility/2021/images",
     files: "/versatility/2021/files",
     application:
-      "/versatility/2021/files/2020_Versatile_Basenji_Program_Application_&_Titles_REV05-24-2021.pdf",
+      "/versatility/2021/files/Versatile Basenji Program Application & Titles REV2021NOV22.pdf",
   },
 });
 
@@ -29,11 +32,11 @@ export function getTheme() {
         '"Segoe UI Symbol"',
       ].join(","),
       h1: {
-        fontSize: 24,
+        fontSize: 36,
         fontWeight: "bold",
         marginBottom: 12,
       },
-      h2: { fontSize: 22, marginTop: 12, marginBottom: 8 },
+      h2: { fontSize: 24, marginTop: 12, marginBottom: 8 },
       h3: {
         fontSize: 54,
         fontFamily: [
@@ -54,7 +57,6 @@ export function getTheme() {
 
 export const useGlobalStyles = makeStyles((theme) => ({
   container: {
-    maxWidth: "100%",
-    padding: 0,
+    maxWidth: 1042,
   },
 }));

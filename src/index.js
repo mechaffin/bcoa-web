@@ -5,7 +5,6 @@ import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom";
-//import ReactDOMServer from "react-dom/server";
 import { getTheme } from "theme";
 
 //MECTODO: Checkout this for rendering to html --> https://www.saltycrane.com/blog/2020/05/how-generate-static-html-using-react-typescript-and-nodejs/

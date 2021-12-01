@@ -5,6 +5,7 @@ import {
   Tab,
   Tabs,
   Typography,
+  makeStyles,
 } from "@material-ui/core";
 import { CONSTANTS, useGlobalStyles } from "theme";
 import React, { useState } from "react";
@@ -23,8 +24,13 @@ function a11yProps(index) {
   };
 }
 
+const useStyles = makeStyles((theme) => ({
+  logo: { margin: "24px 0px 8px 0px" },
+}));
+
 function App() {
   const globalClasses = useGlobalStyles();
+  const classes = useStyles();
   const data = useData();
 
   const [tab, setTab] = useState(0);
@@ -33,7 +39,14 @@ function App() {
   };
   return (
     <Container classes={{ root: globalClasses.container }} maxWidth={false}>
-      <Typography variant="h1">BCOA Versatile Basenji Program</Typography>
+      <Link href="https://basenji.org">
+        <img
+          className={classes.logo}
+          src={`${CONSTANTS.path.images}/logo.png`}
+          alt="Basenji Club of America"
+        />
+      </Link>
+      <Typography variant="h1">Versatile Basenji Program</Typography>
 
       <AppBar position="static" color="default">
         <Tabs

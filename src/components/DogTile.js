@@ -17,7 +17,8 @@ const useStyles = makeStyles((theme) => ({
   tileSubtitle: {
     overflow: "auto",
     whiteSpace: "normal",
-    textOverflow: "clip",
+    maxHeight: 70,
+    marginRight: 2,
   },
   callName: { color: theme.palette.common.white },
   fullName: {
@@ -75,7 +76,7 @@ export function DogTile(props) {
         }
         subtitle={
           <>
-            <Tooltip title={fullName}>
+            <Tooltip title={`${fullName}, ${owner}`}>
               <Typography
                 variant="caption"
                 classes={{ root: classes.fullName }}

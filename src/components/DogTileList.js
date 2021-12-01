@@ -30,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
   gridListSubheader: {
     color: "#000",
     backgroundColor: theme.palette.grey[100],
+    margin: 4,
+    boxShadow: theme.shadows[4],
   },
 }));
 
