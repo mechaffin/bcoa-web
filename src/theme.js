@@ -4,9 +4,6 @@ import {
   responsiveFontSizes,
 } from "@material-ui/core";
 
-import { alpha } from "@material-ui/core/styles/colorManipulator";
-import { grey } from "@material-ui/core/colors";
-
 export const CONSTANTS = Object.freeze({
   tile: { width: 315, height: 250, margin: 2 },
   tileBar: { height: 92 },
@@ -14,7 +11,7 @@ export const CONSTANTS = Object.freeze({
     images: "/versatility/2021/images",
     files: "/versatility/2021/files",
     application:
-      "/versatility/2021/files/Versatile Basenji Program Application & Titles REV2021NOV22.pdf",
+      "/versatility/2021/files/Versatile Basenji Program Application & Titles REV2022JFEB08.pdf",
   },
 });
 
