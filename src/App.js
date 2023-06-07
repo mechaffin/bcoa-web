@@ -11,6 +11,7 @@ import { CONSTANTS, useGlobalStyles } from "theme";
 import React, { useState } from "react";
 
 import { About } from "content/About";
+import { Application } from "content/Application";
 import { FAQ } from "content/FAQ";
 import { HonorRoll } from "components/HonorRoll";
 import { Intro } from "content/Intro";
@@ -58,19 +59,7 @@ function App() {
           <Tab label="Introduction" {...a11yProps(0)} />
           <Tab label="About" {...a11yProps(1)} />
           <Tab label="FAQ" {...a11yProps(2)} />
-          <Tab
-            label={
-              <Link
-                title="Versatility Application"
-                href={`${CONSTANTS.path.application}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Application
-              </Link>
-            }
-            {...a11yProps(3)}
-          />
+          <Tab label="Application" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <TabPanel value={tab} index={0}>
@@ -81,6 +70,9 @@ function App() {
       </TabPanel>
       <TabPanel value={tab} index={2}>
         <FAQ />
+      </TabPanel>
+      <TabPanel value={tab} index={3}>
+        <Application />
       </TabPanel>
 
       <HonorRoll {...data} />

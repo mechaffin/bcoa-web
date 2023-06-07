@@ -1,6 +1,6 @@
 {
   "name": "bcoa-web",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://basenji.org/versatility/2021",
   "private": true,
   "dependencies": {

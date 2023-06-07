@@ -40,10 +40,9 @@ const useGoogleSheets = (shareUrlOrSheetId, API_KEY) => {
         const { data } = await axios.get(endpoint, {
           cancelToken: source.token,
         });
-
-        const sheets = data.sheets?.map((sheet) =>
-          convertSheetsToSimpleJson(sheet?.data?.[0]?.rowData)
-        );
+        const sheets = data.sheets?.map((sheet) => {
+          return convertSheetsToSimpleJson(sheet?.data?.[0]?.rowData);
+        });
         setState({ sheets, isFetching: false });
       } catch (error) {
         setState({ sheets: null, isFetching: false, error });

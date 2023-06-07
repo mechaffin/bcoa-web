@@ -1,3 +1,4 @@
+import { blue, deepOrange } from "@material-ui/core/colors";
 import {
   createMuiTheme,
   makeStyles,
@@ -10,13 +11,23 @@ export const CONSTANTS = Object.freeze({
   path: {
     images: "/versatility/2021/images",
     files: "/versatility/2021/files",
-    application:
-      "/versatility/2021/files/Versatile Basenji Program Application & Titles REV2022JFEB08.pdf",
+    application: {
+      printable:
+        "/versatility/2021/files/VBP Printable Application REV2022NOV30.pdf",
+      interactive:
+        "/versatility/2021/files/VBP Interactive Application REV2022NOV30.xlsx",
+      interactiveList:
+        "/versatility/2021/files/VBP Interactive Application REV2022NOV30 - titles list.pdf",
+    },
   },
 });
 
 export function getTheme() {
   let theme = createMuiTheme({
+    palette: {
+      primary: blue,
+      secondary: deepOrange,
+    },
     typography: {
       fontSize: 12,
       fontFamily: [

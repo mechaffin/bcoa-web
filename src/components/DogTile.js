@@ -52,7 +52,13 @@ export function DogTile(props) {
   } = data;
 
   const fullName = [prefix, regName, suffix].filter(Boolean).join(" ");
-  const imageName = `${regName}_${title.id}.jpg`.replaceAll("'", "_");
+  const imageName = `${regName}_${title.id}.jpg`
+    .replaceAll("'", "_")
+    .replaceAll("‘", "_")
+    .replaceAll("’", "_")
+    .replaceAll("“", "_")
+    .replaceAll("”", "_");
+
   //console.log(year, callName, imageName);
 
   return (

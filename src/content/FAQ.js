@@ -4,7 +4,6 @@ import {
   AccordionSummary,
   Container,
   Typography,
-  makeStyles,
 } from "@material-ui/core";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
