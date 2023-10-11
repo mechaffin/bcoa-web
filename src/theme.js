@@ -15,9 +15,9 @@ export const CONSTANTS = Object.freeze({
       printable:
         "/versatility/2021/files/VBP Printable Application REV2022NOV30.pdf",
       interactive:
-        "/versatility/2021/files/VBP Interactive Application REV2022NOV30.xlsx",
+        "/versatility/2021/files/VBP Interactive Application REV2023SEP27.xlsx",
       interactiveList:
-        "/versatility/2021/files/VBP Interactive Application REV2022NOV30 - titles list.pdf",
+        "/versatility/2021/files/VBP Interactive Application REV2023SEP27 - titles list.pdf",
     },
   },
 });

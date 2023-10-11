@@ -57,7 +57,7 @@ export function DogTile(props) {
     .replaceAll("‘", "_")
     .replaceAll("’", "_")
     .replaceAll("“", "_")
-    .replaceAll("”", "_");
+    .replaceAll("“", "_");
 
   //console.log(year, callName, imageName);
 
