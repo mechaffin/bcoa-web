@@ -31,6 +31,7 @@ export function getTheme() {
     typography: {
       fontSize: 12,
       fontFamily: [
+        "Arial",
         '"Segoe UI"',
         "-apple-system",
         "sans-serif",
