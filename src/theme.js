@@ -13,11 +13,11 @@ export const CONSTANTS = Object.freeze({
     files: "/versatility/2021/files",
     application: {
       printable:
-        "/versatility/2021/files/VBP Printable Application REV2022NOV30.pdf",
+        "/versatility/2021/files/VBP Application REV28Aug2024 - Printable.pdf",
       interactive:
-        "/versatility/2021/files/VBP Interactive Application REV2023SEP27.xlsx",
-      interactiveList:
-        "/versatility/2021/files/VBP Interactive Application REV2023SEP27 - titles list.pdf",
+        "/versatility/2021/files/VBP Application REV28Aug2024 - Interactive.xlsx",
+      titlesList:
+        "/versatility/2021/files/VBP Application REV28Aug2024 - Titles List.pdf",
     },
   },
 });

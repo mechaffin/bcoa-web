@@ -12,62 +12,66 @@ export function Application() {
         Versatile Basenji Program Application
       </Typography>
 
-      <Typography variant="h6" color="secondary">
-        Interactive Application (**NEW**)
-      </Typography>
-
       <Typography paragraph={true}>
         The Versatile Basenji Program created a new interactive application in
-        2022. This new format allows you to choose titles from drop down lists
-        and the form will calculate your dog's award level. The new format
-        requires Microsoft Excel.
+        2022. While the previous printable format has been retired (2024), you
+        can still submit your dog's application by printing and filling out a
+        hardcopy.
       </Typography>
       <ul>
         <li>
           <Link
-            title="Interactive Application"
+            title="Application - Interactive Excel File"
             href={`${CONSTANTS.path.application.interactive}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <b>Interactive Application</b>
+            <b>Application - Interactive</b>
           </Link>
+          <ul>
+            <li>Requires Microsoft Excel</li>
+            <li>
+              Form calculates your dog's award evel based on the titles chosen
+              from drop down lists
+            </li>
+            <li>Submit via email</li>
+          </ul>
         </li>
         <li>
           <Link
-            title="Titles list used in the Interactive Application"
-            href={`${CONSTANTS.path.application.interactiveList}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Interactive Application - Titles List only
-          </Link>
-        </li>
-      </ul>
-
-      <Typography variant="h6">Printable Application</Typography>
-
-      <Typography paragraph={true}>
-        Because not everyone has access to Microsoft Excel and some just like
-        doing things on paper, the printable format is still available. This
-        lengthy package includes the FAQ and the title listing.
-      </Typography>
-      <ul>
-        <li>
-          <Link
-            title="Printable Application"
+            title="Application - Printable PDF"
             href={`${CONSTANTS.path.application.printable}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Printable Application
+            Application - Printable PDF
           </Link>
+          <ul>
+            <li>Print a hardcopy and fill out</li>
+            <li>Submit via email or regular mail</li>
+          </ul>
+        </li>
+        <li>
+          <Link
+            title="Titles List"
+            href={`${CONSTANTS.path.application.titlesList}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Titles List - Printable PDF
+          </Link>
+          <ul>
+            <li>Printable listing (or grid) of titles that at each level</li>
+            <li>
+              This listing is also included in the Interactive format. This is
+              provided as a standalone printable version.
+            </li>
+          </ul>
         </li>
       </ul>
 
       <Typography paragraph={true}>
-        If you notice any discrepancies between the Interactive and Printable
-        titles lists or have any other questions or feedback, direct them to{" "}
+        If you have any questions or feedback, direct them to{" "}
         <Link title="More Information" href="mailto:lacroix@animalink.com">
           Suzanne LaCroix
         </Link>
