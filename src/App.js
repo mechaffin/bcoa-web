@@ -1,22 +1,14 @@
-import {
-  AppBar,
-  Container,
-  Link,
-  Tab,
-  Tabs,
-  Typography,
-  makeStyles,
-} from "@material-ui/core";
-import { CONSTANTS, useGlobalStyles } from "theme";
-import React, { useState } from "react";
+import { AppBar, Container, Link, Tab, Tabs, Typography } from "@mui/material";
 
 import { About } from "content/About";
 import { Application } from "content/Application";
+import { CONSTANTS } from "theme";
 import { FAQ } from "content/FAQ";
 import { HonorRoll } from "components/HonorRoll";
 import { Intro } from "content/Intro";
 import { TabPanel } from "components/TabPanel";
 import { useData } from "hooks/useData";
+import { useState } from "react";
 
 function a11yProps(index) {
   return {
@@ -25,13 +17,7 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
-  logo: { margin: "24px 0px 8px 0px" },
-}));
-
 function App() {
-  const globalClasses = useGlobalStyles();
-  const classes = useStyles();
   const data = useData();
 
   const [tab, setTab] = useState(0);
@@ -39,10 +25,10 @@ function App() {
     setTab(newTab);
   };
   return (
-    <Container classes={{ root: globalClasses.container }} maxWidth={false}>
+    <Container sx={{ maxWidth: 1042 }} maxWidth={false}>
       <Link href="https://basenji.org">
         <img
-          className={classes.logo}
+          style={{ margin: "24px 0px 8px 0px" }}
           src={`${CONSTANTS.path.images}/logo.png`}
           alt="Basenji Club of America"
         />

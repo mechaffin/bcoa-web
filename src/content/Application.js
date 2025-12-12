@@ -1,18 +1,15 @@
-import { CONSTANTS, useGlobalStyles } from "theme";
-import { Container, Link, Typography } from "@material-ui/core";
+import { Container, Link, Typography } from "@mui/material";
 
-import React from "react";
+import { CONSTANTS } from "theme";
 
 export function Application() {
-  const globalClasses = useGlobalStyles();
-
   return (
-    <Container classes={{ root: globalClasses.container }} maxWidth={false}>
+    <Container sx={{ maxWidth: 1042 }} maxWidth={false}>
       <Typography variant="h2">
         Versatile Basenji Program Application
       </Typography>
 
-      <Typography paragraph={true}>
+      <Typography sx={{ mb: 2 }}>
         The Versatile Basenji Program created a new interactive application in
         2022. While the previous printable format has been retired (2024), you
         can still submit your dog's application by printing and filling out a
@@ -68,9 +65,31 @@ export function Application() {
             </li>
           </ul>
         </li>
+        <li>
+          <Link
+            title="Rainbow Form"
+            href={`${CONSTANTS.path.application.rainbowForm}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Rainbow Form - Printable PDF
+          </Link>
+          <ul>
+            <li>
+              Use this printable form to update your dog's final list of titles
+              achieved during their lifetime. You may also submit an photo.
+            </li>
+            <li>
+              If you believe your dog has achieved a new award level prior to
+              passing, please submit either the interactive or printable
+              application instead.
+            </li>
+            <li>Submit via email</li>
+          </ul>
+        </li>
       </ul>
 
-      <Typography paragraph={true}>
+      <Typography sx={{ mb: 2 }}>
         If you have any questions or feedback, direct them to{" "}
         <Link title="More Information" href="mailto:lacroix@animalink.com">
           Suzanne LaCroix

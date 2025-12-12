@@ -1,41 +1,15 @@
-import { Tooltip, Typography } from "@material-ui/core";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import {
+  ImageListItem,
+  ImageListItemBar,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 
 import { CONSTANTS } from "theme";
-import GridListTile from "@material-ui/core/GridListTile";
-import GridListTileBar from "@material-ui/core/GridListTileBar";
-import React from "react";
 import { TitleAvatar } from "./TitleAvatar";
-
-const useStyles = makeStyles((theme) => ({
-  tile: CONSTANTS.tile,
-  tileBar: {
-    height: CONSTANTS.tileBar.height,
-    backgroundColor: fade(theme.palette.grey[900], 0.5),
-  },
-  tileTitleWrap: { marginLeft: "8px" },
-  tileSubtitle: {
-    overflow: "auto",
-    whiteSpace: "normal",
-    maxHeight: 70,
-    marginRight: 2,
-  },
-  callName: { color: theme.palette.common.white },
-  fullName: {
-    color: theme.palette.grey[50],
-    fontSize: ".78rem",
-    lineHeight: 1.1,
-  },
-  owner: {
-    color: theme.palette.grey[300],
-    fontSize: ".78rem",
-    fontStyle: "italic",
-    lineHeight: 1.1,
-  },
-}));
+import { alpha } from "@mui/material/styles";
 
 export function DogTile(props) {
-  const classes = useStyles();
   const { data } = props;
 
   const {
@@ -62,21 +36,44 @@ export function DogTile(props) {
   //console.log(year, callName, imageName);
 
   return (
-    <GridListTile className={classes.tile} key={regNum}>
+    <ImageListItem
+      sx={{
+        width: CONSTANTS.tile.width,
+        height: CONSTANTS.tile.height,
+        margin: CONSTANTS.tile.margin,
+      }}
+      key={regNum}
+    >
       <img
-        className={classes.img}
         src={`${CONSTANTS.path.images}/dogs/${imageName}`}
         alt={callName}
+        style={{
+          width: "100%",
+          height: CONSTANTS.tile.height,
+          objectFit: "cover",
+          display: "block",
+        }}
       />
 
-      <GridListTileBar
-        classes={{
-          root: classes.tileBar,
-          titleWrap: classes.tileTitleWrap,
-          subtitle: classes.tileSubtitle,
+      <ImageListItemBar
+        sx={{
+          height: CONSTANTS.tileBar.height,
+          backgroundColor: (theme) => alpha(theme.palette.grey[900], 0.5),
+          "& .MuiImageListItemBar-titleWrap": {
+            marginLeft: 0,
+            paddingLeft: "4px",
+            paddingTop: "2px",
+            paddingBottom: "2px",
+          },
+          "& .MuiImageListItemBar-subtitle": {
+            overflow: "auto",
+            whiteSpace: "normal",
+            maxHeight: 70,
+            marginRight: 0.25,
+          },
         }}
         title={
-          <Typography variant="h4" classes={{ root: classes.callName }}>
+          <Typography variant="h4" sx={{ color: "common.white" }}>
             {callName}
           </Typography>
         }
@@ -85,18 +82,30 @@ export function DogTile(props) {
             <Tooltip title={`${fullName}, ${owner}`}>
               <Typography
                 variant="caption"
-                classes={{ root: classes.fullName }}
+                sx={{
+                  color: "grey.50",
+                  fontSize: ".78rem",
+                  lineHeight: 1.1,
+                }}
               >
                 {fullName}
               </Typography>
             </Tooltip>
-            <Typography variant="caption" classes={{ root: classes.owner }}>
+            <Typography
+              variant="caption"
+              sx={{
+                color: "grey.300",
+                fontSize: ".78rem",
+                fontStyle: "italic",
+                lineHeight: 1.1,
+              }}
+            >
               , {owner}
             </Typography>
           </>
         }
         actionIcon={<TitleAvatar title={title} year={year} />}
       />
-    </GridListTile>
+    </ImageListItem>
   );
 }

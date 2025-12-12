@@ -1,15 +1,8 @@
-import { Container, Typography, makeStyles } from "@material-ui/core";
-import React, { useState } from "react";
+import { Container, Typography } from "@mui/material";
 import { getTitleByLevel, sortDesc } from "../utils";
 
 import { DogTileList } from "components/DogTileList";
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: "100%",
-    padding: 0,
-  },
-}));
+import { useState } from "react";
 
 const sortEntriesByKeyDesc = (left, right) => {
   return sortDesc(left[0], right[0]);
@@ -45,13 +38,16 @@ const Groupings = {
 };
 
 export function HonorRoll(props) {
-  const classes = useStyles();
   const { isFetching, titles, honorRoll } = props;
 
   const [grouping, setGrouping] = useState(Groupings.Year);
 
   return (
-    <Container classes={{ root: classes.container }} maxWidth={false}>
+    <Container
+      aria-label="honor-roll-container"
+      sx={{ maxWidth: "100%", padding: 0 }}
+      maxWidth={false}
+    >
       <Typography variant="h2">Versatile Basenji Honor Roll</Typography>
 
       {isFetching && <Typography>Loading...</Typography>}

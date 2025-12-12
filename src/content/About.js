@@ -1,16 +1,13 @@
-import { CONSTANTS, useGlobalStyles } from "theme";
-import { Container, Link, Typography } from "@material-ui/core";
+import { Container, Link, Typography } from "@mui/material";
 
-import React from "react";
+import { CONSTANTS } from "theme";
 
 export function About() {
-  const globalClasses = useGlobalStyles();
-
   return (
-    <Container classes={{ root: globalClasses.container }} maxWidth={false}>
+    <Container sx={{ maxWidth: 1042 }} maxWidth={false}>
       <Typography variant="h2">About the Versatile Basenji Program</Typography>
 
-      <Typography paragraph={true}>
+      <Typography sx={{ mb: 2 }}>
         The Versatile Basenji Program was created by BCOA members in 2003. It
         recognizes all Basenjis - show, athletes, and pets. The program is
         designed to reward the lifetime accomplishments of your dog. Individuals
@@ -24,7 +21,7 @@ export function About() {
         versatility. Each year, the newest “Class of” awardees on the "Versatile
         Basenji Program Honor Roll" are published in a BCOA publication.
       </Typography>
-      <Typography paragraph={true}>
+      <Typography sx={{ mb: 2 }}>
         Getting started is as simple as finding an activity you enjoy doing with
         your Basenji. The Versatile Basenji Program recognizes a wide spectrum
         of activities and achievements in the following categories (also see the{" "}
@@ -60,7 +57,7 @@ export function About() {
         </ul>
       </Typography>
 
-      <Typography paragraph={true}>
+      <Typography sx={{ mb: 2 }}>
         Direct questions about the Versatile Basenji Program to{" "}
         <Link title="More Information" href="mailto:lacroix@animalink.com">
           Suzanne LaCroix

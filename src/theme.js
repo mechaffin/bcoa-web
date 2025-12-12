@@ -1,29 +1,27 @@
-import { blue, deepOrange } from "@material-ui/core/colors";
-import {
-  createMuiTheme,
-  makeStyles,
-  responsiveFontSizes,
-} from "@material-ui/core";
+import { blue, deepOrange } from "@mui/material/colors";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 export const CONSTANTS = Object.freeze({
-  tile: { width: 315, height: 250, margin: 2 },
+  tile: { width: 315, height: 250, margin: 0 },
   tileBar: { height: 92 },
   path: {
     images: "/versatility/2021/images",
     files: "/versatility/2021/files",
     application: {
       printable:
-        "/versatility/2021/files/VBP Application REV28Aug2024 - Printable.pdf",
+        "/versatility/2021/files/VBP Application REV11Dec2025 - Printable.pdf",
       interactive:
-        "/versatility/2021/files/VBP Application REV28Aug2024 - Interactive.xlsx",
+        "/versatility/2021/files/VBP Application REV11Dec2025 - Interactive.xlsx",
       titlesList:
-        "/versatility/2021/files/VBP Application REV28Aug2024 - Titles List.pdf",
+        "/versatility/2021/files/VBP Application REV11Dec2025 - Titles List.pdf",
+      rainbowForm:
+        "/versatility/2021/files/VBP Application REV11Dec2025 - Rainbow Form.pdf",
     },
   },
 });
 
 export function getTheme() {
-  let theme = createMuiTheme({
+  let theme = createTheme({
     palette: {
       primary: blue,
       secondary: deepOrange,
@@ -62,9 +60,3 @@ export function getTheme() {
   theme = responsiveFontSizes(theme);
   return theme;
 }
-
-export const useGlobalStyles = makeStyles((theme) => ({
-  container: {
-    maxWidth: 1042,
-  },
-}));

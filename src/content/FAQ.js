@@ -4,11 +4,9 @@ import {
   AccordionSummary,
   Container,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import React from "react";
-import { useGlobalStyles } from "theme";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function FaqItem({ title, children }) {
   return (
@@ -24,10 +22,8 @@ function FaqItem({ title, children }) {
 }
 
 export function FAQ() {
-  const globalClasses = useGlobalStyles();
-
   return (
-    <Container classes={{ root: globalClasses.container }} maxWidth={false}>
+    <Container sx={{ maxWidth: 1042 }} maxWidth={false}>
       <FaqItem title="Who can apply for these awards?">
         The Versatile Basenji Program (VBP) recognizes the accomplishments of
         any basenji, living or deceased. Owners are not required to be BCOA
